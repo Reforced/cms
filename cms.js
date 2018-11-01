@@ -230,7 +230,7 @@ function append() {
         '<p class="main_content_p">General Feedback</p>',
         '</li>',
         '<li class="main_content_li main_content_feature" align="center">',
-        '<a target="_blank" href="https://github.com/ChilloutMusica/cms"><p class="main_content_p">Github</p></a>',
+        '<a target="_blank" href="https://reforced.github.io/cms"><p class="main_content_p">Github</p></a>',
         '</li>',
         '<li class="main_content_li main_content_feature" align="center">',
         '<a target="_blank" href="https://chrome.google.com/webstore/detail/cms/pcmddbmdajejpddlhjkhfechjhkibpoa/reviews"><p class="main_content_p">Rate Us</p></a>',
@@ -241,7 +241,7 @@ function append() {
         '</div>'
     ].join('');
     setTimeout(function() {
-        $('.chat-main').append('<li class="chat-welcome-message" style="text-align: center; color: #CCC;"><br><br><br><span>CMS Version - ' + version + '<br>' + motd + '<br><br><span>Owners/Co-Owners Please Note That Community Css Has Been Changed Click <a target="_blank" href="http://chilloutmusica.github.io/cms/options/">Here</a> To See How It Is Now Done.<br>Emotes Are A Work In Progress.<br>Thank You.</span><br><br><br></li>');
+        $('.chat-main').append('<li class="chat-welcome-message" style="text-align: center; color: #CCC;"><br><br><br><span>CMS Version - ' + version + '<br>' + motd + '<br><br><span>Owners/Co-Owners Please Note That Community Css Has Been Changed Click <a target="_blank" href="https://reforced.github.io/cms/options/">Here</a> To See How It Is Now Done.<br>Emotes Are A Work In Progress.<br>Thank You.</span><br><br><br></li>');
         $('<span class="chat-option-header">CMS</span><div class="chat-option-buttons cmsbtns"><span style="width: 50%;" class="cmsbtns" onclick="fade();">Main menu</span><span style="width: 50%;" class="cmsbtns" onclick="chatmode();">Chat mode</span></div>').insertAfter('.chat-option-buttons-sound');
     }, 5000);
     setTimeout(function() {
@@ -724,7 +724,7 @@ function videomode() {
 function cmtheme() {
     if (!options.cmtheme) {
         options.cmtheme = true;
-        $('head').append('<link class="CMTHEME" href="https://chilloutmusica.github.io/cms/assets/cm.css" rel="stylesheet" type="text/css">');
+        $('head').append('<link class="CMTHEME" href="https://reforced.github.io/cms/assets/cm.css" rel="stylesheet" type="text/css">');
         storage('cmtheme', 'true');
         enable('.cmtheme');
     } else {
