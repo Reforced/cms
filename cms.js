@@ -15,7 +15,7 @@ Disputes shall be settled by Oslo City Court.
 /*global Dubtrack*/
 /*global $*/
 var gitroot = 'https://reforced.github.io/cms';
-var motd = 'Mirror version by Reforced';
+var motd = 'Mirror by Reforced';
 var version = '11.11.10r';
 var emo = [];
 var men = [];
