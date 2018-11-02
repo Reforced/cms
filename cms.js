@@ -1597,21 +1597,23 @@ function roomoptions() {
         var content = e.data.description;
         if (content.indexOf('@cms=')) {
             var data = '' + content.match(/(@cms=)((https?:\/\/)?[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/\S*)?)/) + '';
-            var json = data.split('@cms=')[1].replace(',', '');
-            $.ajax({
-                type: 'GET',
-                beforeSend: function() {
-                    this.xhrFields.withCredentials = false;
-                },
-                url: json,
-                dataType: "json"
-            }).done(function(f) {
-                localStorage.setItem('room_css', f.css);
-                localStorage.setItem('room_social_icon', f.social.icon);
-                localStorage.setItem('room_social_link', f.social.link);
-                //localStorage.setItem('room_emotes', f.emotes);
-                roomsocial();
-            });
+            if(typeof(data.split('@cms=')[1]) != "undefined") {
+                var json = data.split('@cms=')[1].replace(',', '');
+                $.ajax({
+                    type: 'GET',
+                    beforeSend: function() {
+                        this.xhrFields.withCredentials = false;
+                    },
+                    url: json,
+                    dataType: "json"
+                }).done(function(f) {
+                    localStorage.setItem('room_css', f.css);
+                    localStorage.setItem('room_social_icon', f.social.icon);
+                    localStorage.setItem('room_social_link', f.social.link);
+                    //localStorage.setItem('room_emotes', f.emotes);
+                    roomsocial();
+                });
+            }
         }
     });
 }
@@ -1739,7 +1741,7 @@ setTimeout(function() {
     Dubtrack.Events.bind('realtime:room_playlist-queue-update-grabs', grablist);
     roomoptions();
     usercontent();
-    log();
+    //log();
     listhover();
     updatecmen();
     updatebg();
