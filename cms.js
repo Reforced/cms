@@ -15,8 +15,8 @@ Disputes shall be settled by Oslo City Court.
 /*global Dubtrack*/
 /*global $*/
 var gitroot = 'https://reforced.github.io/cms';
-var motd = 'Scroll on video to change volume!';
-var version = '11.11.10';
+var motd = 'Mirror version by Reforced';
+var version = '11.11.10r';
 var emo = [];
 var men = [];
 var menu = {
@@ -220,20 +220,8 @@ function append() {
         '</ul>',
         '<p class="cms-menu-list" onclick="md_contact();" align="center">Other</p>',
         '<ul class="cms-menu-dropdown contact" style="display: none;">',
-        '<li onclick="bug();" class="main_content_li main_content_feature" align="center">',
-        '<p class="main_content_p">Bug</p>',
-        '</li>',
-        '<li onclick="suggestion();" class="main_content_li main_content_feature" align="center">',
-        '<p class="main_content_p">Suggestion</p>',
-        '</li>',
-        '<li onclick="feedback();" class="main_content_li main_content_feature" align="center">',
-        '<p class="main_content_p">General Feedback</p>',
-        '</li>',
         '<li class="main_content_li main_content_feature" align="center">',
-        '<a target="_blank" href="https://reforced.github.io/cms"><p class="main_content_p">Github</p></a>',
-        '</li>',
-        '<li class="main_content_li main_content_feature" align="center">',
-        '<a target="_blank" href="https://chrome.google.com/webstore/detail/cms/pcmddbmdajejpddlhjkhfechjhkibpoa/reviews"><p class="main_content_p">Rate Us</p></a>',
+        '<a target="_blank" href="https://github.com/Reforced/cms"><p class="main_content_p">Github</p></a>',
         '</li>',
         '</ul>',
         '</ul>',
@@ -241,20 +229,17 @@ function append() {
         '</div>'
     ].join('');
     setTimeout(function() {
-        $('.chat-main').append('<li class="chat-welcome-message" style="text-align: center; color: #CCC;"><br><br><br><span>CMS Version - ' + version + '<br>' + motd + '<br><br><span>Owners/Co-Owners Please Note That Community Css Has Been Changed Click <a target="_blank" href="https://reforced.github.io/cms/options/">Here</a> To See How It Is Now Done.<br>Emotes Are A Work In Progress.<br>Thank You.</span><br><br><br></li>');
+        $('.chat-main').append('<li class="chat-welcome-message" style="text-align: center; color: #CCC;"><br><br><br><span>CMS Version - ' + version + '<br>' + motd + '<br><br></li>');
         $('<span class="chat-option-header">CMS</span><div class="chat-option-buttons cmsbtns"><span style="width: 50%;" class="cmsbtns" onclick="fade();">Main menu</span><span style="width: 50%;" class="cmsbtns" onclick="chatmode();">Chat mode</span></div>').insertAfter('.chat-option-buttons-sound');
     }, 5000);
     setTimeout(function() {
         $('body').append('<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css">');
-        $('body').append('<div id="rs-dialog-container" class="INPUT BUG is-preview is-rcs-model" style="display: none;"><div id="rs-dialog-ccc" class="rs-dialog"><div class="dialog-frame" style="background: #282c35;"><span class="title">CMS Bug</span></div><div class="dialog-body"><span class="rs-dialog-message ccc"><div class="content" align="center" style="margin-bottom: 2px;"><textarea class="input bug" style="width: 450px;margin-left: 15px;"></textarea></div></span></div><div class="dialog-frame" style="display: inherit;bottom: -5px;color: #eee;"><div onclick="bugcancel();" class="button submit" style="cursor: pointer;height: 100%;width:100% !important;background: #282c35;" id="rs-ccc-saveDialog"><span>Cancel</span></div><div onclick="bugconfirm();" class="button submit" style="cursor: pointer;height: 100%;width:100% !important;background: #5A93CC;" id="rs-ccc-saveDialog"><span style="margin-top: 55px;">Confirm And Send</span></div></div></div></div>');
-        $('body').append('<div id="rs-dialog-container" class="INPUT SUGGESTION is-preview is-rcs-model" style="display: none;"><div id="rs-dialog-ccc" class="rs-dialog"><div class="dialog-frame" style="background: #282c35;"><span class="title">CMS Suggestion</span></div><div class="dialog-body"><span class="rs-dialog-message ccc"><div class="content" align="center" style="margin-bottom: 2px;"><textarea class="input suggestion" style="width: 450px;margin-left: 15px;"></textarea></div></span></div><div class="dialog-frame" style="display: inherit;bottom: -5px;color: #eee;"><div onclick="suggestioncancel();" class="button submit" style="cursor: pointer;height: 100%;width:100% !important;background: #282c35;" id="rs-ccc-saveDialog"><span>Cancel</span></div><div onclick="suggestionconfirm();" class="button submit" style="cursor: pointer;height: 100%;width:100% !important;background: #5A93CC;" id="rs-ccc-saveDialog"><span style="margin-top: 55px;">Confirm And Send</span></div></div></div></div>');
-        $('body').append('<div id="rs-dialog-container" class="INPUT FEEDBACK is-preview is-rcs-model" style="display: none;"><div id="rs-dialog-ccc" class="rs-dialog"><div class="dialog-frame" style="background: #282c35;"><span class="title">CMS General Feedback</span></div><div class="dialog-body"><span class="rs-dialog-message ccc"><div class="content" align="center" style="margin-bottom: 2px;"><textarea class="input feedback" style="width: 450px;margin-left: 15px;"></textarea></div></span></div><div class="dialog-frame" style="display: inherit;bottom: -5px;color: #eee;"><div onclick="feedbackcancel();" class="button submit" style="cursor: pointer;height: 100%;width:100% !important;background: #282c35;" id="rs-ccc-saveDialog"><span>Cancel</span></div><div onclick="feedbackconfirm();" class="button submit" style="cursor: pointer;height: 100%;width:100% !important;background: #5A93CC;" id="rs-ccc-saveDialog"><span style="margin-top: 55px;">Confirm And Send</span></div></div></div></div>');
         $('body').append('<div id="rs-dialog-container" class="INPUT AFKMSG is-preview is-rcs-model" style="display: none;"><div id="rs-dialog-ccc" class="rs-dialog"><div class="dialog-frame" style="background: #282c35;"><span class="title">Custom Afk Message</span></div><div class="dialog-body"><span class="rs-dialog-message ccc"><div class="content" align="center" style="margin-bottom: 2px;"><textarea class="input afk" style="width: 450px;margin-left: 15px;" placeholder="I am currently AFK at the moment."></textarea></div></span></div><div class="dialog-frame" style="display: inherit;bottom: -5px;color: #eee;background: #5A93CC;"><div onclick="afkmsgc();" class="button submit" style="cursor: pointer;width:100% !important" id="rs-ccc-saveDialog"><span>Save and Close</span></div></div></div></div>');
         $('body').append('<div id="rs-dialog-container" class="INPUT CMEN is-preview is-rcs-model" style="display: none;"><div id="rs-dialog-ccc" class="rs-dialog"><div class="dialog-frame" style="background: #282c35;"><span class="title">Custom Mentions</span></div><div class="dialog-body"><span class="rs-dialog-message ccc"><div class="content" align="center" style="margin-bottom: 2px;"><textarea class="input cmen" style="width: 450px;margin-left: 15px;" placeholder="separate, keywords, by, commas"></textarea></div></span></div><div class="dialog-frame" style="display: inherit;bottom: -5px;color: #eee;background: #5A93CC;"><div onclick="cmenc();" class="button submit" style="cursor: pointer;width:100% !important" id="rs-ccc-saveDialog"><span>Save and Close</span></div></div></div></div>');
         $('body').append('<div id="rs-dialog-container" class="INPUT BG is-preview is-rcs-model" style="display: none;"><div id="rs-dialog-ccc" class="rs-dialog"><div class="dialog-frame" style="background: #282c35;"><span class="title">Custom Background</span></div><div class="dialog-body"><span class="rs-dialog-message ccc"><div class="content" align="center" style="margin-bottom: 2px;"><textarea class="input bg" style="width: 450px;margin-left: 15px;" placeholder="https://example.com/example.jpg / #ffffff"></textarea></div></span></div><div class="dialog-frame" style="display: inherit;bottom: -5px;color: #eee;background: #5A93CC;"><div onclick="bgconfirm();" class="button submit" style="cursor: pointer;width:100% !important" id="rs-ccc-saveDialog"><span>Save and Close</span></div></div></div></div>');
         $('body').append('<div id="rs-dialog-container" class="INPUT CSS is-preview is-rcs-model" style="display: none;"><div id="rs-dialog-ccc" class="rs-dialog"><div class="dialog-frame" style="background: #282c35;"><span class="title">Custom Css</span></div><div class="dialog-body"><span class="rs-dialog-message ccc"><div class="content" align="center" style="margin-bottom: 2px;"><textarea class="input css" style="width: 450px;margin-left: 15px;" placeholder="https://example.com/example.css / body { background-color: #fff; }"></textarea></div></span></div><div class="dialog-frame" style="display: inherit;bottom: -5px;color: #eee;background: #5A93CC;"><div onclick="cssconfirm();" class="button submit" style="cursor: pointer;width:100% !important" id="rs-ccc-saveDialog"><span>Save and Close</span></div></div></div></div>');
-        $('head').append('<script src="https://mitchdev.net/dt/emoarray.js"></script>');
-        $('head').append('<script src="https://mitchdev.net/dt/jquery.textcomplete.js"></script>');
+        //$('head').append('<script src="https://mitchdev.net/dt/emoarray.js"></script>');
+        $('head').append('<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.textcomplete/1.8.4/jquery.textcomplete.min.js"></script>');
         $('.player_sharing').append('<span class="icon-history eta_btn" onclick="eta();" onmouseover="eta_tooltip();" onmouseout="hide_eta_tooltip();"></span>');
         $('.player_sharing').append('<span class="icon-mute snooze_btn" onclick="snooze();" onmouseover="snooze_tooltip();" onmouseout="hide_snooze_tooltip();"></span>');
         $('<a class="dtapibtn" href="http://docs.dubtrackfmapiv11.apiary.io/" target="blank">Dubtrack API</a>').insertAfter('#main-menu-left .navigate.room-active-link');
@@ -632,7 +617,7 @@ function vote(e) {
                 Dubtrack.playerController.voteUpAction();
             }, timeout);
         }
-        else if (options.autovote) {
+        else if (options.randomvote || options.autovote) {
             setTimeout(function(e) {
                 Dubtrack.playerController.voteUpAction();
             }, 2000);
@@ -1232,15 +1217,15 @@ function afktoggle() {
         options.afktoggle = true;
         storage('afktoggle', 'true');
         enable('.afktoggle');
-        $('.pusher-chat-widget-input').remove();
-        $('.chat-container').append('<div align="center" class="pusher-chat-widget-input" style="display: block;"><div id="new-messages-counter" style="display: none;"><span class="messages-display"></span><i class="icon-arrow-down2"></i></div><div class="chatLogin">Turn Of Afk Message To Chat</div></div>');
+        //$('.pusher-chat-widget-input').remove();
+        //$('.chat-container').append('<div align="center" class="pusher-chat-widget-input" style="display: block;"><div id="new-messages-counter" style="display: none;"><span class="messages-display"></span><i class="icon-arrow-down2"></i></div><div class="chatLogin">Turn Of Afk Message To Chat</div></div>');
     }
     else {
         options.afktoggle = false;
         disable('.afktoggle');
         storage('afktoggle', 'false');
-        $('.pusher-chat-widget-input').remove();
-        $('.chat-container').append('<div class="pusher-chat-widget-input"><div id="new-messages-counter" style="display: none;"><span class="messages-display"></span> <i class="icon-arrow-down2"></i></div><input id="chat-txt-message" name="message" type="text" placeholder="Join the conversation" autocomplete="off" maxlength="255"><span class="icon-camera"></span><button class="pusher-chat-widget-send-btn"><span class="icon-arrow-right2"></span></button></div>');
+        //$('.pusher-chat-widget-input').remove();
+        //$('.chat-container').append('<div class="pusher-chat-widget-input"><div id="new-messages-counter" style="display: none;"><span class="messages-display"></span> <i class="icon-arrow-down2"></i></div><input id="chat-txt-message" name="message" type="text" placeholder="Join the conversation" autocomplete="off" maxlength="255"><span class="icon-camera"></span><button class="pusher-chat-widget-send-btn"><span class="icon-arrow-right2"></span></button></div>');
     }
 }
 
@@ -1258,7 +1243,7 @@ function cmentoggle() {
 }
 
 function snooze() {
-    if (!options.snoozed && Dubtrack.room.player.player_volume_level > 2) {
+    if (!options.snoozed && Dubtrack.room.player.player_volume_level > 1) {
         options.currentVol = Number(Dubtrack.room.player.player_volume_level);
         Dubtrack.room.player.setVolume(0);
         options.snoozed = true;
@@ -1540,179 +1525,6 @@ function desktopnotif(title, body) {
     }
 }
 
-function bug() {
-    $('.INPUT.BUG').show();
-}
-
-function bugcancel() {
-    $('.INPUT.BUG').hide();
-}
-
-function bugconfirm() {
-    var message = $('.input.bug').val();
-    var id = Dubtrack.realtime.dtPubNub.get_uuid();
-    var blocked_ids = ['56cb95dface0345a000c09e2', '56942339fd1d10140015ba74'];
-    var blocked;
-    blocked_ids.forEach(function(e) {
-        blocked = '' + e + '';
-    });
-    var username = Dubtrack.session.get('username');
-    var room = Dubtrack.room.model.get('roomUrl');
-    var height = $(window).height();
-    var width = $(window).width();
-    var funenabled = [];
-    if (localStorage.getItem('alertonnav') === 'true') {
-        funenabled.push(' Alert On Navigation');
-    }
-    if (localStorage.getItem('showtimestamp') === 'true') {
-        funenabled.push(' Show Time Stamps');
-    }
-    if (localStorage.getItem('notifionmention') === 'true') {
-        funenabled.push(' Desktop Notification');
-    }
-    if (localStorage.getItem('autoclearchat') === 'true') {
-        funenabled.push(' Autoclear Chat');
-    }
-    if (localStorage.getItem('splitchat') === 'true') {
-        funenabled.push(' Split Chat');
-    }
-    if (localStorage.getItem('autocomplete') === 'true') {
-        funenabled.push(' Autocomplete');
-    }
-    if (localStorage.getItem('autojoin') === 'true') {
-        funenabled.push(' Autojoin');
-    }
-    if (localStorage.getItem('hidebackground') === 'true') {
-        funenabled.push(' Hide Background');
-    }
-    if (localStorage.getItem('afktoggle') === 'true') {
-        funenabled.push(' Afk Message');
-    }
-    if (localStorage.getItem('cmentoggle') === 'true') {
-        funenabled.push(' Custom Mentions');
-    }
-    if (localStorage.getItem('userjoin') === 'true') {
-        funenabled.push(' Join Message');
-    }
-    if (localStorage.getItem('userleave') === 'true') {
-        funenabled.push(' Leave Message');
-    }
-    if (localStorage.getItem('userddub') === 'true') {
-        funenabled.push(' Downdub Message');
-    }
-    if (localStorage.getItem('usergrab') === 'true') {
-        funenabled.push(' Grab Message');
-    }
-    if (localStorage.getItem('userudub') === 'true') {
-        funenabled.push(' Updub Message');
-    }
-    if (localStorage.getItem('boothalert') === 'true') {
-        funenabled.push(' Booth Alert');
-    }
-    if (localStorage.getItem('vote') === 'true') {
-        funenabled.push(' Autovote');
-    }
-    if (localStorage.getItem('randomvote') === 'true') {
-        funenabled.push(' Randomvote');
-    }
-    if (localStorage.getItem('css') === 'true') {
-        funenabled.push(' Community Css');
-    }
-    if (localStorage.getItem('cleardelmsg') === 'true') {
-        funenabled.push(' Hide Deleted Message');
-    }
-    if (localStorage.getItem('avatars') === 'true') {
-        funenabled.push(' Hide Avatars');
-    }
-    if (message.length !== 0) {
-        $.ajax({
-            type: 'POST',
-            url: 'https://hooks.slack.com/services/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',
-            data: 'payload={"attachments": [{"fields": [{"title": "Username","value": "' + username + '","short": true},{"title": "Room","value": "' + room + '","short": true},{"title": "ID","value": "' + id + '","short": true},{"title": "Version","value": "' + version + '","short": true},{"title": "Window Size","value": "w:' + width + ', h:' + height + '","short": true},{"title": "Functions Enabled","value": "' + funenabled + '","short": true},{"title": "Message","value": "' + message + '","short": true}],"color": "danger"}], "icon_url": "https://api.dubtrack.fm/user/' + id + '/image"}',
-            crossDomain: true
-        });
-        $('.input.bug').val('');
-        notification('info', 'Bug successfully sent');
-        $('.INPUT.BUG').hide();
-    }
-}
-
-function suggestion() {
-    $('.INPUT.SUGGESTION').show();
-}
-
-function feedback() {
-    $('.INPUT.FEEDBACK').show();
-}
-
-function suggestioncancel() {
-    $('.INPUT.SUGGESTION').hide();
-}
-
-function feedbackcancel() {
-    $('.INPUT.FEEDBACK').hide();
-}
-
-function suggestionconfirm() {
-    var message = $('.input.suggestion').val();
-    var id = Dubtrack.realtime.dtPubNub.get_uuid();
-    var blocked_ids = ['56cb95dface0345a000c09e2', '56942339fd1d10140015ba74'];
-    var blocked;
-    blocked_ids.forEach(function(e) {
-        blocked = '' + e + '';
-    });
-    var username = Dubtrack.session.get('username');
-    var room = Dubtrack.room.model.get('roomUrl');
-    if (message.length !== 0 && id !== blocked) {
-        $.ajax({
-            type: 'POST',
-            url: 'https://hooks.slack.com/services/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',
-            data: 'payload={"attachments": [{"fields": [{"title": "Username","value": "' + username + '","short": true},{"title": "Room","value": "' + room + '","short": true},{"title": "ID","value": "' + id + '","short": true},{"title": "Version","value": "' + version + '","short": true},{"title": "Message","value": "' + message + '","short": true}],"color": "good"}], "icon_url": "https://api.dubtrack.fm/user/' + id + '/image"}',
-            crossDomain: true
-        });
-        $('.input.suggestion').val('');
-        notification('info', 'Suggestion successfully sent');
-        $('.INPUT.SUGGESTION').hide();
-    }
-}
-
-function feedbackconfirm() {
-    var message = $('.input.feedback').val();
-    var id = Dubtrack.realtime.dtPubNub.get_uuid();
-    var blocked_ids = ['56cb95dface0345a000c09e2', '56942339fd1d10140015ba74'];
-    var blocked;
-    blocked_ids.forEach(function(e) {
-        blocked = '' + e + '';
-    });
-    var username = Dubtrack.session.get('username');
-    var room = Dubtrack.room.model.get('roomUrl');
-    if (message.length !== 0 && id !== blocked) {
-        $.ajax({
-            type: 'POST',
-            url: 'https://hooks.slack.com/services/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',
-            data: 'payload={"attachments": [{"fields": [{"title": "Username","value": "' + username + '","short": true},{"title": "Room","value": "' + room + '","short": true},{"title": "ID","value": "' + id + '","short": true},{"title": "Version","value": "' + version + '","short": true},{"title": "Message","value": "' + message + '","short": true}],"color": "warning"}], "icon_url": "https://api.dubtrack.fm/user/' + id + '/image"}',
-            crossDomain: true
-        });
-        $('.input.feedback').val('');
-        notification('info', 'Feedback successfully sent');
-        $('.INPUT.FEEDBACK').hide();
-    }
-}
-
-function log() {
-    var username = Dubtrack.session.get('username');
-    var room = Dubtrack.room.model.get('roomUrl');
-    var id = Dubtrack.realtime.dtPubNub.get_uuid();
-    if (username !== null) {
-        $.ajax({
-            type: 'POST',
-            url: 'https://hooks.slack.com/services/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',
-            data: 'payload={"username": "' + username + ' enabled cms", "attachments": [{"fields": [{"title": "Username","value": "' + username + '","short": true},{"title": "Room","value": "' + room + '","short": true},{"title": "ID","value": "' + id + '","short": true},{"title": "Version","value": "' + version + '","short": true}],"color": "#93CC5A"}], "icon_url": "https://api.dubtrack.fm/user/' + id + '/image"}',
-            crossDomain: true
-        });
-    }
-}
-
 function newmessage() {
     if ($('#new-messages-counter').css('display') === 'block') {
         var count = $('.messages-display').text().slice(0, 2);
@@ -1817,19 +1629,6 @@ $('#new-messages-counter').on('click', function() {
 });
 append();
 setTimeout(function() {
-    if (Dubtrack.session.get('_id') === '55ff8bf7196f170300cc0b2a') {
-        $.ajax({
-            type: 'GET',
-            url: 'https://mitchdev.net/cms/user/',
-            beforeSend: function() {this.xhrFields.withCredentials = false;},
-            dataType: 'JSON'
-        }).done(function(e) {
-            $('.chat-main').append('<li class="chat-welcome-message" style="text-align: center; color: #CCC;"><br><br><span>'+e.users.length+' users have their info in the database.</span><br><br></li>');
-        });
-    }
-    if (Dubtrack.session.get('_id') === '5609dc356c09ec03001e7748') {
-        $('body').append('<div class="pizza" style="background: url(http://i.imgur.com/A0qhlG2.gif);"></div>');
-    }
     if (localStorage.getItem('showids') === 'true') {
         showids();
     }
