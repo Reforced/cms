@@ -229,7 +229,6 @@ function append() {
         '</div>'
     ].join('');
     setTimeout(function() {
-        $('.chat-main').append('<li class="chat-welcome-message" style="text-align: center; color: #CCC;"><br><br><br><span>CMS Version - ' + version + '<br>' + motd + '<br><br></li>');
         $('<span class="chat-option-header">CMS</span><div class="chat-option-buttons cmsbtns"><span style="width: 50%;" class="cmsbtns" onclick="fade();">Main menu</span><span style="width: 50%;" class="cmsbtns" onclick="chatmode();">Chat mode</span></div>').insertAfter('.chat-option-buttons-sound');
     }, 5000);
     setTimeout(function() {
