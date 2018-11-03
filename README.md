@@ -4,7 +4,7 @@ This is a mirror of the Chillout Music Script (CMS) for dubtrack.fm, since the o
 How to use
 ---
 - Install a userscript manager, e.g. [Tampermonkey](https://tampermonkey.net/)
-- Download the userscript from [here](http://reforced.github.io/cms/)
+- Download the userscript from [here](http://reforced.github.io/cms/). Alternatively the bookmarklet is also available there.
 
 Credits
 ---
