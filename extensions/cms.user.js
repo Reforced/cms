@@ -4,6 +4,7 @@
 // @description    Runs cms on dubtrack
 // @author         Mitch & Kris
 // @include        https://www.dubtrack.fm/join/*
+// @include        https://beta.dubtrack.fm/join/*
 // @version        0.5.1
 // @grant          none
 // ==/UserScript==
