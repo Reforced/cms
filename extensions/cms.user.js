@@ -9,6 +9,7 @@
 // @grant          none
 // ==/UserScript==
 
+var $ = window.jQuery;
 $(document).ready(function() {
     setTimeout(function() {
         console.log('CMS Loaded');
