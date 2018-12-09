@@ -2,11 +2,13 @@
 // @name           cms
 // @namespace      cms
 // @description    Runs cms on dubtrack
-// @author         Mitch & Kris
+// @author         Mitch & Kris & Reforced
 // @include        https://www.dubtrack.fm/join/*
 // @include        https://beta.dubtrack.fm/join/*
 // @require        https://code.jquery.com/jquery-3.3.1.min.js
-// @version        0.5.1
+// @require        https://www.dubtrack.fm/assets/js/plugins/fn.jquery.js
+// @require        https://www.dubtrack.fm/assets/js/plugins/jquery.multisortable.js
+// @version        1
 // @grant          none
 // ==/UserScript==
 
