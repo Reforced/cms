@@ -8,6 +8,7 @@
 // @require        https://code.jquery.com/jquery-3.3.1.min.js
 // @require        https://www.dubtrack.fm/assets/js/plugins/fn.jquery.js
 // @require        https://www.dubtrack.fm/assets/js/plugins/jquery.multisortable.js
+// @updateURL      https://reforced.github.io/cms/extensions/cms.user.js
 // @version        1
 // @grant          none
 // ==/UserScript==
