@@ -16,7 +16,7 @@ Disputes shall be settled by Oslo City Court.
 /*global $*/
 var gitroot = 'https://reforced.github.io/cms';
 var motd = 'Mirror by Reforced';
-var version = '11.11.10r';
+var version = '11.11.11';
 var emo = [];
 var men = [];
 var menu = {
@@ -1445,7 +1445,7 @@ function autocompleteue() {
                         id = user.id;
                     }
                 });
-                return '<img src="https://api.dubtrack.fm/user/' + id + '/image"></img>@' + value + '<span class="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;press enter to select</span>';
+                return '<img src="https://cdn.eighties.yt/user/' + id + '"></img>@' + value + '<span class="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;press enter to select</span>';
             },
             replace: function(mention) {
                 return '@' + mention + ' ';
